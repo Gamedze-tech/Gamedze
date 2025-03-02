@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+body {
+    background: #12151a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.nav-bar {
+    text-align: center;
+    align-items: center;
+    background: none;
+    color: #fff;
+}
+
+.nav-bar p {
+    color: #fff;
+}
+
+.nav-bar p span{
+    color: #fff;
+    margin: 5px;
+}
+
+.nav-bar p span a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-bar p span a:hover {
+    color: #73ff00;
+}
+
+.container {
+    background: none;
+    color: #969393;
+    width: 85%;
+    padding-right: 30px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.sections {
+    background: #1f242d;
+    border-radius: 25px;
+    border: #00024a solid 5px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow:rgba(0, 0, 0, 0.268) 15px 25px;
+}
+
+.sections:hover {
+    background: #00024a;
+    border: #1f242d solid 5px;
+    color: #fff;
+    box-shadow: 25px 0 25px #00024a3c;
+}
+
+a {
+    text-decoration: none;
+    color: #7cf03d;
+}
+
+.sections h2 {
+    background: #00024a;
+    border: #1f242d solid 3px;
+    border-radius: 25px;
+    padding: 15px;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.exps {
+    border-bottom: #ffffff97 solid 3px;
+}
+
+.button    {
+    display: inline-flex;
+}
+
+button {
+    background: #2e3542;
+    border-radius: 25px;
+    padding: 1.5em 6em;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    margin-left: 2em;
+    border: none;
+    font-weight: bolder;
+    color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cv-button {
+    background: linear-gradient(to top left, #73ff00, #00c3ff);
+    border-radius: 25px;
+    padding: 1.5em 6em;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    margin-left: 25px;
+    border: none;
+    font-weight: bolder;
+    color: #1500ff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cv-button::after {
+    content: '';
+    position: absolute;
+    height: 110%;
+    width: 102%;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom right, #0800ff, #ff0000);
+    z-index: -1;
+}
+
+.cv-button:hover {
+    z-index: 0;
+    color: #4dff00;
+}
+
+button::after{
+    content: '';
+    position: absolute;
+    height: 110%;
+    width: 102%;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom right, #00024a, #7cf03d);
+    z-index: -1;
+}
+
+button:hover {
+    z-index: 0;
+    color: #00024a;
+}
+
+.references {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+
+
+}
+
+.refs {
+    background: none;
+    padding: 10px 40px;
+    border: #12151a solid 3px;
+    border-radius: 25px;
+}
+
+.work-ref {
+    color: #484e59;
+}
+
+.progress-cont {
+    width: 25em;
+    height: .2em;
+    background-color: #12151a;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #000;
+}
+
+.progress-bar-1 {
+    width: 88%;
+    height: 100%;
+    background-color: #00c3ff;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.progress-bar-2 {
+    width: 98%;
+    height: 100%;
+    background-color: #00c3ff;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.progress-bar-3 {
+    width: 100%;
+    height: 100%;
+    background-color: #00c3ff;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.progress-bar-4 {
+    width: 100%;
+    height: 100%;
+    background-color: #00c3ff;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.progress-bar-5 {
+    width: 75%;
+    height: 100%;
+    background-color: #00c3ff;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.progress-bar-6 {
+    width: 100%;
+    height: 100%;
+    background-color: #00c3ff;
+    text-align: center;
+    line-height: 25px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.sections .languages p {
+    color: #7c7c7c68;
+    padding-left: 20em;
+}
+
+footer {
+    background: none;
+    color: #fff;
+    padding-bottom: 40px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+
+    </style>
+    <title>Web Curriculum Vitae</title>
+    <script>
+        function makeCall() {
+            window.location.href = "tel: +27825644356"
+        }
+
+        function sendEmail() {
+            window.location.href = 
+            "mailto:gamedzesanele42@gmail.com?subject=WEPPAGE%20EMAIL%20CONTACT"
+        }
+    </script>
+</head>
+<body>
+    <div class="nav-bar">
+        <h1><a href="index.html" style="text-decoration: none; color: #fff;">SANELE GAMEDZE</a></h1>
+        <p>            
+            <span><a href="#">Junior Web developer</a></span>
+            <span><a href="#">Graphic Designer</a></span>
+            <span><a href="Certificate of Degree Completion.pdf">LLB Graduate</a></span>
+            <span><a href="#">Sales Agent</a></span>
+            <span><a href="#">Web Manager</a></span>
+        </p>
+
+    </div>
+    <div class="container">
+        <div class="sections">
+            <div class="profile">
+                <h2>PROFILE </h2>
+                <p>I am a recent LLB Graduate from the University of KwaZulu-Natal. I am passionate about law and the legal framework as a whole. 
+                I am also a dedicated aspiring legal practitioner. Throughout my academic career, I have been involved in various volunteering work and community service. 
+                My experience section below reflects a few of my involvement on non-academic activities which has provided me with vast understanding of the legal structure. 
+                I am also passionate about graphic design, Information Technology and technological advancement, my passion has pushed me to learn more about the computer and the way it operates.
+                I have expert level skills on computer Literacy, and some of computer software like MS Office applications, VS Code and Adobe Software like Photoshop, illustrator, adobe Premier Pro and Adobe After Effect and the 3D software called Blender. 
+                I possess impeccable skills on Motion Design, Graphic Design, Web Development, Photo manipulation, typist, and Legal Research, Writing & Reasoning. 
+                I completed most of HTML, CSS, MySQL and JavaScript online courses whilst I was doing well on my academics as a Law student at the University of KwaZulu-Natal.
+                I had acquired all these skills between 2021 to 2024, after Matric.</p>
+            </div>
+        </div>
+        
+        <div class="sections">
+            <div class="personal-data">
+                <h2>PERSONAL DATA</h2>
+                <li>Sanele Buselaphi Gamede</li>
+                <li>020301 6023 08 7</li>
+                <li>South African</li>
+                <li>African</li>
+                <li>Male</li>
+                <li>Race</li>
+                <li>01 March 2002</li>
+                <li>Single</li>
+                <li>Excellent Health Status</li>
+            </div>
+
+        </div>
+        <div class="sections">
+            <div class="res-info">
+                <h2>RESIDENTIAL INFORMATION</h2>
+                <li>42 Mona Road</li>
+                <li>Durban Central</li>
+                <li>4001</li>
+                <li>KwaZulu-Natal</li>
+            </div>
+        </div>
+
+        <div class="sections">
+            <div class="educational-info">
+                <h2>EDUCATIONAL INFORMATION</h2>
+                <div class="institutions">
+                    <h3>MATRIC / NATIONAL SENIOR CERTIFICATE</h3>
+                    <p>Nodineka High School</p>
+                    <p>Skhemelele Area, KwaNgwanase 3973, KwaZulu-Natal.</p>
+                    <p>For Subjects Studied - please refer to the <a href="Matric Certificate.pdf">attached NSC.</a></p>
+                    <p style="color: #4dff00;">COMPLETED</p><br>
+                </div>
+                <div class="institutions">
+                    <h3>BACHELOR OF LAWS DEGREE (4 YEARS)</h3>
+                    <p>University of KwaZulu-Natal</p>
+                    <p>Mazisi Kunene Rd, Durban, KwaZulu-Natal</p>
+                    <p>For Modules completed - please refer to the <a href="Academic Transcript.pdf">attached Academic Transcript</a></p>
+                    <p style="color: #4dff00;">COMPLETED</p><br> 
+                </div>
+            </div>
+        </div>
+
+        <div class="sections">
+            <div class="exp">
+                <h2>EXPERIENCE</h2>
+                <div class="exps">
+                    <h3>NODINEKA HIGH SCHOOL</h3>
+                    <p>Teasching Assistant</p>
+                    <p>Communication | Interpersonal | Organisational | Time-management, Proble-solving | Critical-thinking | Teamwork | Adaptability | Flexibility | Technical skills.</p>
+                    <p>Taught Matric 2022 and Matric 2023 during the winter vacation in June 2022 and 2023. Subjects taught was Mathematical Literacy, Tourism, History and Geography.</p>
+                    <p>Jun 2022 & Jun 2023</p>
+                </div><br>
+
+                <div class="exps">
+                    <h3>UNIVERSITY OF KWAZULU-NATAL, SLSJ.</h3>
+                    <p>Mentor</p>
+                    <p>Communication | Leadership | Teamwork | Critical Thinking | Legal Research.</p>
+                    <p>Mentored First Year LLB Students at UKZN Howard College Campus for the Student 
+                        for Law and Social Justice mentorship programme.</p>
+                    <p>Mar 2023 - Nov 2023</p>
+                </div><br>
+
+                <div class="exps">
+                    <h3>UNIVERSITY OF KWAZULU-NATAL</h3>
+                    <p>Research Assistant</p>
+                    <p>Research | Team focus | Computer Literacy | Critical thinking | Problem solving</p>
+                    <p>Assisted a senior Street Law Lecturer at the University of KwaZulu-Natal, Dr Janine 
+                        Hicks, in research which was aimed at challenging some of the EThekwini Bylaws 
+                        which unjustly affected homeless people. The research team was working for the 
+                        Denis Hurley Centre.</p>
+                    <p>May 2024 - Jun 2024</p>
+                </div><br>
+
+                <div class="exps">
+                    <h3>METROSURE INSURANCE BROKER</h3>
+                    <p>Sales Agent</p>
+                    <p>Teamwork | Adaptability | Communication | Time-management.</p>
+                    <p>Completed a training course for 2 weeks and worked as a sales agent under the 
+                        Metrosure Insurance Broker company, the work contract was selling Mobiles Devices 
+                        on Credit/instalment for one of Metrosure’s clients, Bolt-tect (Formally known as 
+                        Digital Care)</p>
+                    <p>Jan 2025 - Feb 2025</p>
+                </div><br>
+
+                <div class="exps">
+                    <h3>PERSONAL PROJECTS</h3>
+                    <p>Graphic Designer, Web Developer, Motion Designer, Digital artist</p>
+                    <p>Html | css | JavaScript | Adobe Photoshop | illustrator | MS Word | MS PowerPoint | MS Excel | Blender | Adobe After Effect | Adobe Premier Pro | Visual Studio Code</p>
+                    <p>Created multiple 'local host' websites for myself and frientds. Completed various freelance projects on Microsoft Word, PowerPoint and Excel for different individuals and small businesses.
+                        Created a number of Advertisment poster and Fliers for different people. Made a few motion graphic projects using Blender, After Effect and Premier Pro. 
+                        All these skills were acquired through self-research, online free courses and internet video tutorials. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="sections">
+            <div>
+                <h2>REFERENCES</h2>
+                <div class="references">
+                    <div class="refs">
+                    <p>S.W. Mthembu</p>
+                    <p>Nodineka High School Principal</p>
+                    <p>0829732253</p>
+                    <p class="work-ref">Work Reference</p>
+                </div><br>
+                <div class="refs">
+                    <p>Dr. Janine Hicks</p>
+                    <p>UKZN Lecturer</p>
+                    <p>hicksj@ukzn.ac.za</p>
+                    <p class="work-ref">Work Reference</p>
+                </div><br>
+                <div class="refs">
+                    <p>W.M.T Jele</p>
+                    <p>SLSJ Chairman</p>
+                    <p>220005806@stu.ukzn.ac.za</p>
+                    <p class="work-ref">Work Reference</p>
+                </div><br>
+                <div class="refs">
+                    <p>Ms Thuli</p>
+                    <p>Metrosure (Durban) Assistant Manager</p>
+                    <p>0659566520 / 0310655911</p>
+                    <p class="work-ref">Work Reference</p>
+                </div><br>
+                <div class="refs">
+                    <p>Velenkosini Thwala</p>
+                    <p>Candidate Attorney</p>
+                    <p>0767424176</p>
+                    <p class="work-ref">Personal Reference</p>
+                </div><br>
+                <div class="refs">
+                    <p>THEMBA BHENGU</p>
+                    <p>Junior Attorney</p>
+                    <p>0785932826</p>
+                    <p class="work-ref">Personal Reference</p>
+                </div><br>
+                </div>
+                
+            </div>
+        </div>
+        <div class="sections">
+            <div class="skills">
+                <h2>COMPETENCIES</h2>
+                <ul>
+                    <li>Attention to details.</li>
+                    <li>Ability to work under pressure.</li>
+                    <li>Ability to adhere to strict deadlines.</li>
+                    <li>Teamwork</li>
+                    <li>Flexibility</li>
+                    <li>Leadership</li>
+                    <li>Problem-solving</li>
+                    <li>Professionalism</li>
+                    <li>Legal Research</li>
+                    <li>Research </li>
+                    <li>Communication</li>
+                    <li>Computer literacy</li>
+                    <li>Legal Writing</li>
+                    <li>Self-management</li>
+                    <li>Microsoft Excell</li>
+                    <li>Microsoft Word</li>
+                    <li>Microsoft PowerPoint</li>
+                    <li>Adaptation Skills</li>
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe After Effect</li>
+                    <li>Adobe illustrator</li>
+                    <li>Adobe Premier Pro</li>
+                    <li>Visual Studio Code</li>
+                    <li>Blender</li>
+                    <li>Web Development</li>
+                    <li>Graphic Design</li>
+                    <li>Motion Design</li>
+                    <li>3D Creator</li>
+                    <li>VFX</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sections">
+            <div class="languages">
+                <h2>LANGUAGES</h2>
+                <h3>ENGLISH</h3>
+                <div class="progress-cont">
+                    <div class="progress-bar-1"></div>
+                </div>
+                <p>speaking</p>
+                <div class="progress-cont">
+                    <div class="progress-bar-2"></div>
+                </div>
+                <p>writing</p>
+                <div class="progress-cont">
+                    <div class="progress-bar-3"></div>
+                </div>
+                <p>understanding</p><br>
+
+                
+                <h3>ISIZULU</h3>
+                
+                <div class="progress-cont">
+                    <div class="progress-bar-4"></div>
+                </div>
+                <p>speaking</p>
+                <div class="progress-cont">
+                    <div class="progress-bar-5"></div>
+                </div>
+                <p>writing</p>
+                <div class="progress-cont">
+                    <div class="progress-bar-6"></div>
+                </div>
+                <p>understanding</p><br>
+            </div>
+        </div>
+        <div class="sections">
+            <div class="contact-details">
+                <h2>CONTACT DETAILS</h2>
+                <p>gamedzesanele42@gmail.com</p>
+                <p>0825644356</p>
+            </div>
+        </div>
+        <div class="button">
+            <button onclick="makeCall()">Call NOW</button>
+            <a href="https://sanelegamede.netlify.app/"><button>More Info</button></a>
+            <button onclick="sendEmail()">Send Email</button>
+            <button class="cv-button"><a href="Advanced CV .pdf" style="text-decoration: none; color: #fff;">DOWNLOAD CV</a></button>
+        </div>
+
+    </div>
+    
+</body>
+<footer style="text-align: center; display: block;">
+    <span><a href="Privacy Policy.html">Privacy Policy |</a></span>
+    <span><a href="Terms.html">Terms & Conditions |</a></span>
+    <span>Copyright © 2025 - <a href="https://sanelegamede.netlify.app/">Sanele Gamede</a></span>
+</footer>
+</html>
